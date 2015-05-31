@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B71A1EC1B18C2DE00DE2EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1EB1B18C2DE00DE2EB8 /* main.m */; };
+		1B71A1EF1B18C2DE00DE2EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */; };
+		1B71A1F21B18C2DE00DE2EB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */; };
+		1B71A1F51B18C2DE00DE2EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F31B18C2DE00DE2EB8 /* Main.storyboard */; };
+		1B71A1F71B18C2DE00DE2EB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F61B18C2DE00DE2EB8 /* Images.xcassets */; };
+		1B71A1FA1B18C2DE00DE2EB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F81B18C2DE00DE2EB8 /* LaunchScreen.xib */; };
+		1B71A2061B18C2DE00DE2EB8 /* OneDriveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2051B18C2DE00DE2EB8 /* OneDriveTests.m */; };
+		1B71A2181B19F4CF00DE2EB8 /* libPods-LiveSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B71A2171B19F4CF00DE2EB8 /* libPods-LiveSDK.a */; };
+		1B71A21B1B1A6C7E00DE2EB8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A21A1B1A6C7E00DE2EB8 /* FirstViewController.m */; };
+		1B71A21E1B1ADD1F00DE2EB8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */; };
+		1B71A2211B1ADD8F00DE2EB8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */; };
+		1B71A2281B1B096B00DE2EB8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2271B1B096B00DE2EB8 /* DetailViewController.m */; };
+		1B71A22B1B1B203700DE2EB8 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A22A1B1B203700DE2EB8 /* CreateViewController.m */; };
+		1B71A22E1B1B327100DE2EB8 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A22D1B1B327100DE2EB8 /* SelectionViewController.m */; };
+		A281E3274267CFBD70336E86 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A034DA0BAB65779CE61A3EB /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B71A2001B18C2DE00DE2EB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B71A1DE1B18C2DE00DE2EB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B71A1E51B18C2DE00DE2EB8;
+			remoteInfo = OneDrive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AADAF13B42A311A40B0535A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1B71A1E61B18C2DE00DE2EB8 /* OneDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B71A1EA1B18C2DE00DE2EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B71A1EB1B18C2DE00DE2EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B71A1ED1B18C2DE00DE2EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1B71A1F01B18C2DE00DE2EB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B71A1F41B18C2DE00DE2EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B71A1F61B18C2DE00DE2EB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1B71A1F91B18C2DE00DE2EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1B71A1FF1B18C2DE00DE2EB8 /* OneDriveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneDriveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B71A2041B18C2DE00DE2EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B71A2051B18C2DE00DE2EB8 /* OneDriveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneDriveTests.m; sourceTree = "<group>"; };
+		1B71A2131B19F19C00DE2EB8 /* LiveSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LiveSDK; path = Pods/LiveSDK/src/LiveSDK; sourceTree = "<group>"; };
+		1B71A2171B19F4CF00DE2EB8 /* libPods-LiveSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LiveSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-LiveSDK.a"; sourceTree = "<group>"; };
+		1B71A2191B1A6C7E00DE2EB8 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		1B71A21A1B1A6C7E00DE2EB8 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		1B71A21C1B1ADD1F00DE2EB8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		1B71A21F1B1ADD8F00DE2EB8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		1B71A2261B1B096B00DE2EB8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1B71A2271B1B096B00DE2EB8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1B71A2291B1B203700DE2EB8 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		1B71A22A1B1B203700DE2EB8 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		1B71A22C1B1B327100DE2EB8 /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		1B71A22D1B1B327100DE2EB8 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
+		8A034DA0BAB65779CE61A3EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEBE42E43C0FDE537BA90366 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B71A1E31B18C2DE00DE2EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B71A2181B19F4CF00DE2EB8 /* libPods-LiveSDK.a in Frameworks */,
+				A281E3274267CFBD70336E86 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B71A1FC1B18C2DE00DE2EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B71A1DD1B18C2DE00DE2EB8 = {
+			isa = PBXGroup;
+			children = (
+				1B71A1E81B18C2DE00DE2EB8 /* OneDrive */,
+				1B71A2021B18C2DE00DE2EB8 /* OneDriveTests */,
+				1B71A1E71B18C2DE00DE2EB8 /* Products */,
+				B4A0116A50667DDA26F5389D /* Pods */,
+				CD76795E72CC406EA2EA6B34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1B71A1E71B18C2DE00DE2EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A1E61B18C2DE00DE2EB8 /* OneDrive.app */,
+				1B71A1FF1B18C2DE00DE2EB8 /* OneDriveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B71A1E81B18C2DE00DE2EB8 /* OneDrive */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A2251B1B094400DE2EB8 /* old */,
+				1B71A1F31B18C2DE00DE2EB8 /* Main.storyboard */,
+				1B71A1ED1B18C2DE00DE2EB8 /* AppDelegate.h */,
+				1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */,
+				1B71A2191B1A6C7E00DE2EB8 /* FirstViewController.h */,
+				1B71A21A1B1A6C7E00DE2EB8 /* FirstViewController.m */,
+				1B71A2261B1B096B00DE2EB8 /* DetailViewController.h */,
+				1B71A2271B1B096B00DE2EB8 /* DetailViewController.m */,
+				1B71A2291B1B203700DE2EB8 /* CreateViewController.h */,
+				1B71A22A1B1B203700DE2EB8 /* CreateViewController.m */,
+				1B71A22C1B1B327100DE2EB8 /* SelectionViewController.h */,
+				1B71A22D1B1B327100DE2EB8 /* SelectionViewController.m */,
+				1B71A1F61B18C2DE00DE2EB8 /* Images.xcassets */,
+				1B71A1F81B18C2DE00DE2EB8 /* LaunchScreen.xib */,
+				1B71A1E91B18C2DE00DE2EB8 /* Supporting Files */,
+			);
+			path = OneDrive;
+			sourceTree = "<group>";
+		};
+		1B71A1E91B18C2DE00DE2EB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A1EA1B18C2DE00DE2EB8 /* Info.plist */,
+				1B71A1EB1B18C2DE00DE2EB8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B71A2021B18C2DE00DE2EB8 /* OneDriveTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A2051B18C2DE00DE2EB8 /* OneDriveTests.m */,
+				1B71A2031B18C2DE00DE2EB8 /* Supporting Files */,
+			);
+			path = OneDriveTests;
+			sourceTree = "<group>";
+		};
+		1B71A2031B18C2DE00DE2EB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A2041B18C2DE00DE2EB8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B71A2251B1B094400DE2EB8 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A21C1B1ADD1F00DE2EB8 /* SecondViewController.h */,
+				1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */,
+				1B71A21F1B1ADD8F00DE2EB8 /* WebViewController.h */,
+				1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */,
+				1B71A1F01B18C2DE00DE2EB8 /* ViewController.h */,
+				1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */,
+			);
+			name = old;
+			sourceTree = "<group>";
+		};
+		B4A0116A50667DDA26F5389D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEBE42E43C0FDE537BA90366 /* Pods.debug.xcconfig */,
+				1AADAF13B42A311A40B0535A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD76795E72CC406EA2EA6B34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B71A2171B19F4CF00DE2EB8 /* libPods-LiveSDK.a */,
+				1B71A2131B19F19C00DE2EB8 /* LiveSDK */,
+				8A034DA0BAB65779CE61A3EB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B71A1E51B18C2DE00DE2EB8 /* OneDrive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B71A2091B18C2DE00DE2EB8 /* Build configuration list for PBXNativeTarget "OneDrive" */;
+			buildPhases = (
+				FB07D996BD6F29B8D3676792 /* Check Pods Manifest.lock */,
+				1B71A1E21B18C2DE00DE2EB8 /* Sources */,
+				1B71A1E31B18C2DE00DE2EB8 /* Frameworks */,
+				1B71A1E41B18C2DE00DE2EB8 /* Resources */,
+				817B97781ABC918AD1ACB177 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneDrive;
+			productName = OneDrive;
+			productReference = 1B71A1E61B18C2DE00DE2EB8 /* OneDrive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B71A1FE1B18C2DE00DE2EB8 /* OneDriveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B71A20C1B18C2DE00DE2EB8 /* Build configuration list for PBXNativeTarget "OneDriveTests" */;
+			buildPhases = (
+				1B71A1FB1B18C2DE00DE2EB8 /* Sources */,
+				1B71A1FC1B18C2DE00DE2EB8 /* Frameworks */,
+				1B71A1FD1B18C2DE00DE2EB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B71A2011B18C2DE00DE2EB8 /* PBXTargetDependency */,
+			);
+			name = OneDriveTests;
+			productName = OneDriveTests;
+			productReference = 1B71A1FF1B18C2DE00DE2EB8 /* OneDriveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B71A1DE1B18C2DE00DE2EB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Dalibor Kozak";
+				TargetAttributes = {
+					1B71A1E51B18C2DE00DE2EB8 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1B71A1FE1B18C2DE00DE2EB8 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1B71A1E51B18C2DE00DE2EB8;
+					};
+				};
+			};
+			buildConfigurationList = 1B71A1E11B18C2DE00DE2EB8 /* Build configuration list for PBXProject "OneDrive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B71A1DD1B18C2DE00DE2EB8;
+			productRefGroup = 1B71A1E71B18C2DE00DE2EB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B71A1E51B18C2DE00DE2EB8 /* OneDrive */,
+				1B71A1FE1B18C2DE00DE2EB8 /* OneDriveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B71A1E41B18C2DE00DE2EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B71A1F51B18C2DE00DE2EB8 /* Main.storyboard in Resources */,
+				1B71A1FA1B18C2DE00DE2EB8 /* LaunchScreen.xib in Resources */,
+				1B71A1F71B18C2DE00DE2EB8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B71A1FD1B18C2DE00DE2EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		817B97781ABC918AD1ACB177 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB07D996BD6F29B8D3676792 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B71A1E21B18C2DE00DE2EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B71A21E1B1ADD1F00DE2EB8 /* SecondViewController.m in Sources */,
+				1B71A2211B1ADD8F00DE2EB8 /* WebViewController.m in Sources */,
+				1B71A1F21B18C2DE00DE2EB8 /* ViewController.m in Sources */,
+				1B71A1EF1B18C2DE00DE2EB8 /* AppDelegate.m in Sources */,
+				1B71A22B1B1B203700DE2EB8 /* CreateViewController.m in Sources */,
+				1B71A22E1B1B327100DE2EB8 /* SelectionViewController.m in Sources */,
+				1B71A1EC1B18C2DE00DE2EB8 /* main.m in Sources */,
+				1B71A21B1B1A6C7E00DE2EB8 /* FirstViewController.m in Sources */,
+				1B71A2281B1B096B00DE2EB8 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B71A1FB1B18C2DE00DE2EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B71A2061B18C2DE00DE2EB8 /* OneDriveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B71A2011B18C2DE00DE2EB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B71A1E51B18C2DE00DE2EB8 /* OneDrive */;
+			targetProxy = 1B71A2001B18C2DE00DE2EB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1B71A1F31B18C2DE00DE2EB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B71A1F41B18C2DE00DE2EB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B71A1F81B18C2DE00DE2EB8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B71A1F91B18C2DE00DE2EB8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B71A2071B18C2DE00DE2EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1B71A2081B18C2DE00DE2EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B71A20A1B18C2DE00DE2EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBE42E43C0FDE537BA90366 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OneDrive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1B71A20B1B18C2DE00DE2EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AADAF13B42A311A40B0535A /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OneDrive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1B71A20D1B18C2DE00DE2EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OneDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneDrive.app/OneDrive";
+			};
+			name = Debug;
+		};
+		1B71A20E1B18C2DE00DE2EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OneDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneDrive.app/OneDrive";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B71A1E11B18C2DE00DE2EB8 /* Build configuration list for PBXProject "OneDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B71A2071B18C2DE00DE2EB8 /* Debug */,
+				1B71A2081B18C2DE00DE2EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B71A2091B18C2DE00DE2EB8 /* Build configuration list for PBXNativeTarget "OneDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B71A20A1B18C2DE00DE2EB8 /* Debug */,
+				1B71A20B1B18C2DE00DE2EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B71A20C1B18C2DE00DE2EB8 /* Build configuration list for PBXNativeTarget "OneDriveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B71A20D1B18C2DE00DE2EB8 /* Debug */,
+				1B71A20E1B18C2DE00DE2EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B71A1DE1B18C2DE00DE2EB8 /* Project object */;
+}
