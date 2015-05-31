@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 
@@ -21,8 +22,12 @@
 @property (strong, nonatomic) NSMutableArray *selectedItems;
 
 @property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) AppDelegate *appDelegate;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
+
 @property (assign, nonatomic) BOOL isActionMove;
 @property (assign, nonatomic) BOOL isActionCopy;
+
 @end
 
 @implementation FirstViewController
@@ -36,10 +41,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString* client_id = @"00000000481577FF";
-    self.liveClient = [[LiveConnectClient alloc] initWithClientId:client_id delegate:self userState:@"initialize"];
+    self.liveClient = [[LiveConnectClient alloc] initWithClientId:@"00000000481577FF" delegate:self userState:@"initialize"];
+    self.appDelegate = [[UIApplication sharedApplication] delegate];
+    [self tableViewSetup];
 }
 
+- (void)tableViewSetup {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor lightGrayColor];
+    self.refreshControl.backgroundColor = [UIColor colorWithWhite:0.926 alpha:1.000];
+    [self.refreshControl addTarget:self action:@selector(reloadDataForCurrentItem) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.tableView setEditing:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.data = [self.appDelegate.data objectForKey:@"homeData"];
+    [self.tableView reloadData];
+}
+
+#pragma mark - Login
 - (void)authCompleted:(LiveConnectSessionStatus) status
               session:(LiveConnectSession *) session
             userState:(id) userState
@@ -62,15 +84,11 @@
     }
 }
 
-- (void)reloadDataForCurrentItem {
-    [self stopEditing];
-     [self.liveClient getWithPath:@"me/skydrive/files" delegate:self userState:@"getItems"];
-}
-
 - (void)authFailed:(NSError *) error userState:(id)userState {
     NSLog(@"Error: %@", [error localizedDescription]);
 }
 
+#pragma mark - Response to actions
 - (void) liveOperationFailed:(NSError *)error operation:(LiveOperation *)operation {
     NSLog(@"req failed live: %@", [error localizedDescription]);
     NSLog(@"error message: %@", error);
@@ -82,9 +100,10 @@
         [self reloadDataForCurrentItem];
         
     } else if ([operation.userState isEqualToString:@"getItems"]) {
-        NSLog(@"req succ: %@, result: %@", operation.userState, operation.result);
         self.data = operation.result[@"data"];
+        [self.appDelegate.data setObject:self.data forKey:@"homeData"];
         [self.tableView reloadData];
+        
     } else if ([operation.userState isEqualToString:@"newFolder"]) {
         NSLog(@"Item was newFolder");
         [self reloadDataForCurrentItem];
@@ -100,60 +119,12 @@
     }
 }
 
-#pragma mark - TableView
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.data count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    NSDictionary *dict = self.data[indexPath.item];
-    NSString *name = dict[@"name"];
-    NSString *count = dict[@"count"];
-    
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = count ? [NSString stringWithFormat:@"%@", count] : @"";
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dict = self.data[indexPath.item];
-    NSString *name = dict[@"name"];
-    NSString *fileId = dict[@"id"];
-    NSString *type = dict[@"type"];
-    
-    if (!tableView.editing) {
-        if ([type isEqual:@"folder"]) {
-            DetailViewController * detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
-            detailVC.fileId = fileId;
-            detailVC.liveClient = self.liveClient;
-            detailVC.title = name;
-            [self.navigationController pushViewController:detailVC animated:YES];
-        }
-    } else {
-        if (! [self.selectedItems containsObject:fileId]) {
-            [self.selectedItems addObject:fileId];
-        }
+- (void)reloadDataForCurrentItem {
+    [self stopEditing];
+    [self.liveClient getWithPath:@"me/skydrive/files" delegate:self userState:@"getItems"];
+    if(self.refreshControl != nil && self.refreshControl.isRefreshing == TRUE) {
+        [self.refreshControl endRefreshing];
     }
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dict = self.data[indexPath.item];
-    NSString *fileId = dict[@"id"];
-    [self.selectedItems removeObject:fileId];
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleNone;
 }
 
 #pragma mark - IBActions
@@ -257,6 +228,58 @@
             [self.liveClient copyFromPath:itemId toDestination:folderId delegate:self userState:@"copyFile"];
         }
     }
+}
+
+#pragma mark - TableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.data count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSDictionary *dict = self.data[indexPath.item];
+    NSString *name = dict[@"name"];
+    NSString *count = dict[@"count"];
+    
+    cell.textLabel.text = name;
+    cell.detailTextLabel.text = count ? [NSString stringWithFormat:@"%@", count] : @"";
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict = self.data[indexPath.item];
+    NSString *name = dict[@"name"];
+    NSString *fileId = dict[@"id"];
+    NSString *type = dict[@"type"];
+    
+    if (!tableView.editing) {
+        if ([type isEqual:@"folder"]) {
+            DetailViewController * detailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+            detailVC.fileId = fileId;
+            detailVC.liveClient = self.liveClient;
+            detailVC.title = name;
+            [self.navigationController pushViewController:detailVC animated:YES];
+        }
+    } else {
+        if (! [self.selectedItems containsObject:fileId]) {
+            [self.selectedItems addObject:fileId];
+        }
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict = self.data[indexPath.item];
+    NSString *fileId = dict[@"id"];
+    [self.selectedItems removeObject:fileId];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
 @end

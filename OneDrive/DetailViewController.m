@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController ()
 
@@ -14,8 +15,10 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editBtn;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) AppDelegate *appDelegate;
 
 @end
 
@@ -25,6 +28,23 @@
     [super viewDidLoad];
     
     [self.liveClient getWithPath:[NSString stringWithFormat:@"%@/files", self.fileId] delegate:self userState:@"getFiles"];
+    self.appDelegate = [[UIApplication sharedApplication] delegate];
+    [self tableViewSetup];
+}
+
+- (void)tableViewSetup {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor lightGrayColor];
+    self.refreshControl.backgroundColor = [UIColor colorWithWhite:0.926 alpha:1.000];
+    [self.refreshControl addTarget:self action:@selector(reloadDataForCurrentItem) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.tableView setEditing:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.data = [self.appDelegate.data objectForKey:self.fileId];
+    [self.tableView reloadData];
 }
 
 - (void) liveOperationFailed:(NSError *)error operation:(LiveOperation *)operation {
@@ -32,10 +52,19 @@
 }
 
 - (void) liveOperationSucceeded:(LiveOperation *)operation {
-    NSLog(@"req succ: %@, result: %@", operation.userState, operation.result);
     self.data = operation.result[@"data"];
     
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.data setObject:self.data forKey:self.fileId];
+    
     [self.tableView reloadData];
+}
+
+- (void)reloadDataForCurrentItem {
+    [self.liveClient getWithPath:[NSString stringWithFormat:@"%@/files", self.fileId] delegate:self userState:@"getItems"];
+    if(self.refreshControl != nil && self.refreshControl.isRefreshing == TRUE) {
+        [self.refreshControl endRefreshing];
+    }
 }
 
 #pragma mark - TableView
