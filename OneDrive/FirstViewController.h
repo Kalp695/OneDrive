@@ -11,7 +11,9 @@
 #import "CreateViewController.h"
 #import "SelectionViewController.h"
 
-@interface FirstViewController : UIViewController <LiveAuthDelegate, LiveOperationDelegate,LiveDownloadOperationDelegate, LiveUploadOperationDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CreateViewControllerDelegate, SelectionViewControllerDelegate>
+@interface FirstViewController : UIViewController <LiveAuthDelegate, LiveOperationDelegate,LiveDownloadOperationDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, CreateViewControllerDelegate, SelectionViewControllerDelegate>
+
+- (void)parentReload;
 
 @property (strong, nonatomic) LiveConnectClient *liveClient;
 @property (strong, nonatomic) NSString *fileId;

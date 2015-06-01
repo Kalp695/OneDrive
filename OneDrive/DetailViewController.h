@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CreateViewController.h"
+#import "SelectionViewController.h"
 #import "LiveSDK/LiveConnectClient.h"
+#import "FirstViewController.h"
 
-@interface DetailViewController : UIViewController <LiveOperationDelegate,LiveDownloadOperationDelegate, LiveUploadOperationDelegate,UITableViewDelegate, UITableViewDataSource>
+@interface DetailViewController : UIViewController <LiveOperationDelegate,LiveDownloadOperationDelegate,UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSString *fileId;
 @property (strong, nonatomic) LiveConnectClient *liveClient;
+@property (weak, nonatomic) FirstViewController *parentVC;
 
 @end

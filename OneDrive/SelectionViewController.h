@@ -11,14 +11,16 @@
 
 @protocol SelectionViewControllerDelegate <NSObject>
 
-- (void)didSelectFolder:(NSString *)folderId;
+- (void)didSelectFolder:(NSString *)folderId forAction:(NSString *)action withItems:(NSArray *)items;
 
 @end
 
 @interface SelectionViewController : UIViewController <LiveOperationDelegate,LiveDownloadOperationDelegate, LiveUploadOperationDelegate,UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) id <SelectionViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSString *fileId;
 @property (strong, nonatomic) LiveConnectClient *liveClient;
+@property (strong, nonatomic) NSString *fileId;
+@property (strong, nonatomic) NSString *btnTitle;
+@property (strong, nonatomic) NSArray *selectedItems;
 
 @end

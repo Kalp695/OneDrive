@@ -25,7 +25,7 @@
 }
 
 - (IBAction)createFolderBtn:(UIButton *)sender {
-    [self.delegate addNewFolderWithName:self.folderNameTextField.text andDescription:self.folderDescrTextField.text];
+    [self.delegate addNewFolderWithName:self.folderNameTextField.text andDescription:self.folderDescrTextField.text inFolder:self.folderId];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

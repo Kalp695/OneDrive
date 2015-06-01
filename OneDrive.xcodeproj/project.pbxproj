@@ -9,15 +9,12 @@
 /* Begin PBXBuildFile section */
 		1B71A1EC1B18C2DE00DE2EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1EB1B18C2DE00DE2EB8 /* main.m */; };
 		1B71A1EF1B18C2DE00DE2EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */; };
-		1B71A1F21B18C2DE00DE2EB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */; };
 		1B71A1F51B18C2DE00DE2EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F31B18C2DE00DE2EB8 /* Main.storyboard */; };
 		1B71A1F71B18C2DE00DE2EB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F61B18C2DE00DE2EB8 /* Images.xcassets */; };
 		1B71A1FA1B18C2DE00DE2EB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B71A1F81B18C2DE00DE2EB8 /* LaunchScreen.xib */; };
 		1B71A2061B18C2DE00DE2EB8 /* OneDriveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2051B18C2DE00DE2EB8 /* OneDriveTests.m */; };
 		1B71A2181B19F4CF00DE2EB8 /* libPods-LiveSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B71A2171B19F4CF00DE2EB8 /* libPods-LiveSDK.a */; };
 		1B71A21B1B1A6C7E00DE2EB8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A21A1B1A6C7E00DE2EB8 /* FirstViewController.m */; };
-		1B71A21E1B1ADD1F00DE2EB8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */; };
-		1B71A2211B1ADD8F00DE2EB8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */; };
 		1B71A2281B1B096B00DE2EB8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A2271B1B096B00DE2EB8 /* DetailViewController.m */; };
 		1B71A22B1B1B203700DE2EB8 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A22A1B1B203700DE2EB8 /* CreateViewController.m */; };
 		1B71A22E1B1B327100DE2EB8 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B71A22D1B1B327100DE2EB8 /* SelectionViewController.m */; };
@@ -41,8 +38,6 @@
 		1B71A1EB1B18C2DE00DE2EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B71A1ED1B18C2DE00DE2EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1B71A1F01B18C2DE00DE2EB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1B71A1F41B18C2DE00DE2EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B71A1F61B18C2DE00DE2EB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B71A1F91B18C2DE00DE2EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,10 +48,6 @@
 		1B71A2171B19F4CF00DE2EB8 /* libPods-LiveSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LiveSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-LiveSDK.a"; sourceTree = "<group>"; };
 		1B71A2191B1A6C7E00DE2EB8 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1B71A21A1B1A6C7E00DE2EB8 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		1B71A21C1B1ADD1F00DE2EB8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		1B71A21F1B1ADD8F00DE2EB8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		1B71A2261B1B096B00DE2EB8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		1B71A2271B1B096B00DE2EB8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1B71A2291B1B203700DE2EB8 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
@@ -110,7 +101,6 @@
 		1B71A1E81B18C2DE00DE2EB8 /* OneDrive */ = {
 			isa = PBXGroup;
 			children = (
-				1B71A2251B1B094400DE2EB8 /* old */,
 				1B71A1F31B18C2DE00DE2EB8 /* Main.storyboard */,
 				1B71A1ED1B18C2DE00DE2EB8 /* AppDelegate.h */,
 				1B71A1EE1B18C2DE00DE2EB8 /* AppDelegate.m */,
@@ -153,19 +143,6 @@
 				1B71A2041B18C2DE00DE2EB8 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1B71A2251B1B094400DE2EB8 /* old */ = {
-			isa = PBXGroup;
-			children = (
-				1B71A21C1B1ADD1F00DE2EB8 /* SecondViewController.h */,
-				1B71A21D1B1ADD1F00DE2EB8 /* SecondViewController.m */,
-				1B71A21F1B1ADD8F00DE2EB8 /* WebViewController.h */,
-				1B71A2201B1ADD8F00DE2EB8 /* WebViewController.m */,
-				1B71A1F01B18C2DE00DE2EB8 /* ViewController.h */,
-				1B71A1F11B18C2DE00DE2EB8 /* ViewController.m */,
-			);
-			name = old;
 			sourceTree = "<group>";
 		};
 		B4A0116A50667DDA26F5389D /* Pods */ = {
@@ -322,9 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B71A21E1B1ADD1F00DE2EB8 /* SecondViewController.m in Sources */,
-				1B71A2211B1ADD8F00DE2EB8 /* WebViewController.m in Sources */,
-				1B71A1F21B18C2DE00DE2EB8 /* ViewController.m in Sources */,
 				1B71A1EF1B18C2DE00DE2EB8 /* AppDelegate.m in Sources */,
 				1B71A22B1B1B203700DE2EB8 /* CreateViewController.m in Sources */,
 				1B71A22E1B1B327100DE2EB8 /* SelectionViewController.m in Sources */,
